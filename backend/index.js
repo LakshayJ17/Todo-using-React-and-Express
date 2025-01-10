@@ -6,7 +6,6 @@ const { todo } = require('./db')
 
 app.use(express.json())
 
-
 app.post("/todo", async (req, res) => {
   const createPayload = req.body;
   const parsedPayload = createTodo.safeParse(createPayload)

@@ -10,34 +10,34 @@ export function CreateTodo() {
             type="text"
             className="m-10 p-40"
             placeholder="Enter title"
-            onChange={(e) => setTitle(e.target.value)
-            }
-        /> <br />
+            onChange={(e) => setTitle(e.target.value)}
+        />
+        <br />
 
         <input
             type="text"
             className="m-4 p-4"
             placeholder="Enter description"
-            onChange={(e) => setDescription(e.target.value)
-            } 
-        /> <br />
+            onChange={(e) => setDescription(e.target.value)}
+        />
+        <br />
 
-        <button 
-        onClick={() => {
-            fetch("http://localhost:3000/todos", {
-                method: "POST",
-                body: {
-                    title: title,
-                    description: description
-                },
-                headers: {
-                    "Content-Type ": "application/json"
-                }
-            })
-                .then(async function (res) {
-                    const json = await res.json()
-                    alert("Todo added successfully")
+        <button
+            onClick={() => {
+                fetch("http://localhost:3000/todo", {
+                    method: "POST",
+                    body: JSON.stringify({
+                        title: title,
+                        description: description
+                    }),
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
                 })
-        }}>Add a Todo</button>
+                    .then(async function (res) {
+                        const json = await res.json()
+                        alert("Todo added successfully")
+                    })
+            }}>Add a Todo</button>
     </div>
 }

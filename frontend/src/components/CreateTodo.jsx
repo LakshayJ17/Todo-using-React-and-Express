@@ -8,7 +8,7 @@ export function CreateTodo() {
     return <div>
         <input
             type="text"
-            className="m-10 p-40"
+            className="m-2 p-2 border border-gray-300 rounded"
             placeholder="Enter title"
             onChange={(e) => setTitle(e.target.value)}
         />
@@ -16,7 +16,7 @@ export function CreateTodo() {
 
         <input
             type="text"
-            className="m-4 p-4"
+            className="m-2 p-2 border border-gray-300 rounded"
             placeholder="Enter description"
             onChange={(e) => setDescription(e.target.value)}
         />

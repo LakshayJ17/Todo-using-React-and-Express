@@ -23,6 +23,7 @@ export function CreateTodo() {
         <br />
 
         <button
+            className="m-2 p-2 bg-blue-500 text-white rounded"
             onClick={() => {
                 fetch("http://localhost:3000/todo", {
                     method: "POST",

@@ -15,7 +15,8 @@ function App() {
   return (
     <>
       <CreateTodo />
-      <Todos todos={todos} />
+      {/* <Todos todos={todos} /> */}
+      <Todos />
     </>
   )
 }

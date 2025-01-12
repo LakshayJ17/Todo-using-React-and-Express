@@ -16,7 +16,6 @@ function App() {
     <>
       <CreateTodo />
       <Todos todos={todos} />
-      {/* <Todos /> */}
     </>
   )
 }
